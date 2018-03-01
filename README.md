@@ -10,3 +10,9 @@ This stores the creds locally, un-encrypted within the repo folder (in .git/conf
 `git remote set-url origin https://user:password@github.com/username/MyRepo.git`
 
 see https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
+
+### Delete all commit history in github
+
+https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github
+
+
