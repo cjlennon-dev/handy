@@ -13,6 +13,14 @@ see https://stackoverflow.com/questions/6565357/git-push-requires-username-and-p
 
 ### Delete all commit history in github
 
+Its not something you'd want to do lightly, but if you have been playing around and you don't want to expose your vague ramblings in your code to the world, you can delete your commit history (still of course keeping your actual code).  To do this follow the instructions in:
 https://stackoverflow.com/questions/13716658/how-to-delete-all-commit-history-in-github
+
+Or if you do this kind of thing a lot and you are using nodejs you could even create a script like:
+````json
+"scripts": {
+    "git-nuke-history" : "git checkout --orphan latest_branch & git add -A & git commit -am \"nuke\" & git branch -D master &  git branch -m master & git push -f origin master"
+  },
+  ````
 
 
