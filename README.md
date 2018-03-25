@@ -1,6 +1,10 @@
 # handy
 some handy git etc commands
 
+## Npm
+
+Check for package updades. Various packages do this, the one I like is npm-check.  Install it from npm and run `npm-check -u`
+
 ## Git
 
 ### To store credentials within a repo.  
