@@ -31,15 +31,24 @@ Or if you do this kind of thing a lot and you are using nodejs you could even cr
   
 It is often said that it is more important to be consistant in the way you name things than to be 'right'.  Naming things is largely a matter of convention.  I use the below naming convention:
 
-- Folder names, file names, Lambda function names and urls are named as lowercase-with-hypen.  So `my-folder-name`, `my-file-name.js`, `/check-user-auth`
+- Folder names, file names, Lambda function names and urls are named as lowercase-with-hypen.  So `my-folder-name`, `my-file-name.js`, `/check-user-auth`.  The only exceptions are the `LICENSE` file and `README.md`
+
+- If it makes sense to join two words together then do so.  Its one less hypen.  So `lowercase-with-hypen` over `lower-case-with-hyphen`.  But only if the joined word makes sense: don't do `my-reallygood-component`.  This is a subtle one, don't sweat it too much
+
 - In code use camelCase.  So `let myModule = require('my-module.js')`.  Simply camelCase all words, so `htmlPage` not `HTMLPage` `myApi` not `myAPI` and so on.
+
 - Name commands e.g. npm scripts as lower-case-with-hyphen.   Its one less key-stroke than the underscore
+
 - Name environment variables as UPPERCASE_WITH_UNDERSCORE.  Mainly because its just the convention
-- Name configuration values (e.g. AWS IAM Users, CloudFormation stacks, API Gateway resources etc) as lowercase-with-hypen.  So `my-iam-user`, `my-cloudformation-stack` etc.  If the field does not allow hypens use underscores, and if underscores are not allowed used MixedCase
 
-- For database tables (including Nosql databases such as AWS DynamoDB) and table field names use MixedCase.  So `Contacts`, `OrderLines` tables, `Id`, `FirstName` field names etc.  Use plurals for table names, so `Sessions` rather than `Session`, `OrderLines` over `OrderLine` and so on
+- Name configuration values (e.g. AWS IAM Users, CloudFormation stacks, API Gateway resources etc) as lowercase-with-hypen.  So `my-iam-user`, `my-cloudformation-stack` etc.  The reason for this is that Voyzu resources are tightly coupled with their component - which will be named using the file nameing convention.  If the field does not allow hypens use underscores, and if underscores are not allowed use MixedCase
 
+- Database naming:
+    - For DynamoDB Database table names use lowercase-with-hyphen .  So `contacts`, `order-lines` tables.  This is because Voyzu resources are tightly coupled with their component - which will be named using mixedcase-with-hypen
+    - For MySql table names use lowercase_with_underscore.  This is because MySQL doesn't like hypens in its table names
+    - Use plurals for table names, so `sessions` rather than `session`, `order-lines` over `order-line` and so on
+    - For table field names use MixedCase e.g. `Id`, `FirstName` field names etc.  
 
-- For everything else (and there is a lot else :-) )  use camelCase.  In the 'everything else' bucket would be JSON field names, HTML form fields, YAML fields etc
+- For everything else (and there is a lot else :-) )  use MixedCase.  In the 'everything else' bucket would be JSON field names, HTML form fields, YAML fields etc.  There is no real reason for this, it just keeps things consistant, and having no non alpha-numeric characters means it wil always be allowed
 
 
