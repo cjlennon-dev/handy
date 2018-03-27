@@ -29,7 +29,7 @@ Or if you do this kind of thing a lot and you are using nodejs you could even cr
   
   ## Naming things
   
-It is often said that it is more important to be consistant in the way you name things than to be 'right'.  Naming things is largely a matter of convention.  I use the below naming convention:
+It is often said that it is more important to be consistant in the way you name things than to be 'right'.  Naming things is largely a matter of convention.  I personally use the below naming conventions:
 
 - Folder names, file names, Lambda function names and urls are named as lowercase-with-hypen.  So `my-folder-name`, `my-file-name.js`, `/check-user-auth`.  The only exceptions are the `LICENSE` file and `README.md`
 
