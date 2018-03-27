@@ -41,10 +41,10 @@ It is often said that it is more important to be consistant in the way you name 
 
 - Name environment variables as UPPERCASE_WITH_UNDERSCORE.  Mainly because its just the convention
 
-- Name configuration values (e.g. AWS IAM Users, CloudFormation stacks, API Gateway resources etc) as lowercase-with-hypen.  So `my-iam-user`, `my-cloudformation-stack` etc.  The reason for this is that Voyzu resources are tightly coupled with their component - which will be named using the file nameing convention.  If the field does not allow hypens use underscores, and if underscores are not allowed use MixedCase
+- Name configuration values (e.g. AWS IAM Users, CloudFormation stacks, API Gateway resources etc) as lowercase-with-hypen.  So `my-iam-user`, `my-cloudformation-stack` etc.  The reason for this is that Voyzu resources are tightly coupled with their component - which will be named using lowercase-with-hypen.  If the field does not allow hypens use underscores, and if underscores are not allowed use MixedCase
 
 - Database naming:
-    - For DynamoDB Database table names use lowercase-with-hyphen .  So `contacts`, `order-lines` tables.  This is because Voyzu resources are tightly coupled with their component - which will be named using mixedcase-with-hypen
+    - For DynamoDB Database table names use lowercase-with-hyphen .  So `contacts`, `order-lines` tables.  This is because Voyzu resources are tightly coupled with their component - which will be named using lowercase-with-hypen
     - For MySql table names use lowercase_with_underscore.  This is because MySQL doesn't like hypens in its table names
     - Use plurals for table names, so `sessions` rather than `session`, `order-lines` over `order-line` and so on
     - For table field names use MixedCase e.g. `Id`, `FirstName` field names etc.  
