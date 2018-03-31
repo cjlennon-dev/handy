@@ -15,6 +15,10 @@ This stores the creds locally, un-encrypted within the repo folder (in .git/conf
 
 see https://stackoverflow.com/questions/6565357/git-push-requires-username-and-password
 
+### Handy page on getting / setting git credentials
+
+https://alvinalexander.com/git/git-show-change-username-email-address
+
 ### Delete all commit history in github
 
 Its not something you'd want to do lightly, but if you have been playing around and you don't want to expose your vague ramblings in your code to the world, you can delete your commit history (still of course keeping your actual code).  To do this follow the instructions in:
